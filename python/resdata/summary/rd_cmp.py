@@ -95,7 +95,7 @@ class ResdataCmp(object):
         return self.test_case.endTimeEqual(self.ref_case)
 
     def cmp_summary_vector(self, key, sample=100):
-        """Will compare the summary vectors according to @key.
+        r"""Will compare the summary vectors according to @key.
 
         The comparison is based on evaluating the integrals:
 

@@ -1491,7 +1491,7 @@ are advised to fetch vector as a numpy vector and then scale that yourself:
         return [x.datetime() for x in self._solve_dates(key, value, rates_clamp_lower)]
 
     def solve_days(self, key, value, rates_clamp_lower=True):
-        """Will solve the equation vector[@key] == value.
+        r"""Will solve the equation vector[@key] == value.
 
         This method will solve find tha approximate simulation days
         where the vector @key is equal @value. The method will return
@@ -1573,7 +1573,7 @@ are advised to fetch vector as a numpy vector and then scale that yourself:
         corresponding to the arrow 'B* in the figure.
 
         """
-        if not key in self:
+        if key not in self:
             raise KeyError("Unrecognized key:%s" % key)
 
         if len(self) < 2:
